@@ -1,0 +1,23 @@
+{
+    "development" : {
+        "logs": {
+            "level": "debug",
+            "path": "./logs"
+        },
+        "statsd": {
+            "host": "localhost",
+            "port": "8125",
+            "debug": true
+        }
+    },
+
+    "production" : {
+        "logs": {
+            "level": "warn",
+            "path": "/var/log/redis-metrics"
+        },
+        "statsd" : {
+           "host": "redis.productionaddress.com"
+        }
+    }
+}
