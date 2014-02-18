@@ -17,7 +17,7 @@
             "path": "/var/log/redis-metrics"
         },
         "statsd" : {
-           "host": "redis.productionaddress.com"
+           "host": "statsd.productionaddress.com"
         }
     }
 }
