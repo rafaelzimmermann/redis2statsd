@@ -14,7 +14,7 @@
     "production" : {
         "logs": {
             "level": "warn",
-            "path": "/var/log/redis-metrics"
+            "path": "/var/log/redis2statsd"
         },
         "statsd" : {
            "host": "statsd.productionaddress.com"

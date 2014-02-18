@@ -1,6 +1,6 @@
-# redis-metrics
+# redis2statsd
 
-redis-metrics is a tool written in JavaScript, used to monitor Redis.
+redis2statsd is a tool written in JavaScript, used to monitor Redis.
 
 
 It uses Redis [INFO](http://redis.io/commands/info) command to collect data, and sends it to [StatsD](https://github.com/etsy/statsd/).
@@ -15,11 +15,12 @@ We chose StatsD because it's very flexible and can be plugged with Graphite, Lib
 ## Running
 
 ```
-usage: node lib/redis-metrics.js ["HOST:PORT" ...]
+usage: node lib/Redis2StatsD.js ["HOST:PORT" ...]
 
-    --interval=INTERVAl     Redis consult interval
+    --interval=INTERVAl         Redis consult interval
+    --environment=ENVIRONMENT   Select config.json environment configuration
 
-$node lib/RedisMetrics.js localhost --interval=60
+$node lib/Redis2StatsD.js localhost --interval=60
 ```
 
 
