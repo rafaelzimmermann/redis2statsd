@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "statsd-client": "0.0.14",
-    "redis": "0.9.1",
+    "redis": "0.12.1",
     "minimist": "0.0.7",
     "winston": "0.7.2",
     "underscore": "~1.6.0",
