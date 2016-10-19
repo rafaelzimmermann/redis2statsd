@@ -32,12 +32,12 @@ describe('RedisMetricsController', function() {
     });
 
     describe("Metric calculation", function() {
-        it("should calc expired_key_per_sec", function(done) {
+        it("should calc expired_keys_per_sec", function(done) {
             var addresses = ["someaddress"],
                 interval = 60,
 
                 expectedData = {
-                    "someaddress.expired_key_per_sec": 10
+                    "someaddress.expired_keys_per_sec": 10
                 },
                 rmc,
                 first = true;
@@ -49,12 +49,12 @@ describe('RedisMetricsController', function() {
                         address: "someaddress",
                         info: {
                             "uptime_in_seconds": 0,
-                            "expired_key": 0
+                            "expired_keys": 0
                         }
                     };
                     if (!first) {
                         data.info.uptime_in_seconds = 60;
-                        data.info.expired_key = 600;
+                        data.info.expired_keys = 600;
                     }
                     onInfoCallback(null, data);
                     first = false;
