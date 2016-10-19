@@ -1,5 +1,8 @@
 {
     "development" : {
+        "metric": {
+            "format": "{REDIS_ADDRESS}.{METRIC}"
+        },
         "logs": {
             "level": "debug",
             "path": "./logs"
@@ -12,6 +15,9 @@
     },
 
     "production" : {
+        "metric": {
+            "format": "{REDIS_ADDRESS}.{METRIC}"
+        },
         "logs": {
             "level": "warn",
             "path": "/var/log/redis2statsd"
