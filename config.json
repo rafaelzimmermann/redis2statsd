@@ -1,5 +1,12 @@
 {
     "development" : {
+        "metric": {
+            "format": "{REDIS_ADDRESS}.{METRIC}"
+        },
+        "redis": {
+            "metrics_delta": ["expired_keys", "evicted_keys", "keyspace_hits", "keyspace_misses", "total_connections_received", "total_commands_processed"],
+            "metrics_static": ["instantaneous_ops_per_sec", "used_memory", "mem_fragmentation_ratio", "connected_clients", "rejected_connections"]
+        },
         "logs": {
             "level": "debug",
             "path": "./logs"
@@ -12,6 +19,13 @@
     },
 
     "production" : {
+        "metric": {
+            "format": "{REDIS_ADDRESS}.{METRIC}"
+        },
+        "redis": {
+            "metrics_delta": ["expired_keys", "evicted_keys", "keyspace_hits", "keyspace_misses", "total_connections_received", "total_commands_processed"],
+            "metrics_static": ["instantaneous_ops_per_sec", "used_memory", "mem_fragmentation_ratio", "connected_clients", "rejected_connections"]
+        },
         "logs": {
             "level": "warn",
             "path": "/var/log/redis2statsd"
