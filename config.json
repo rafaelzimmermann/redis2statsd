@@ -5,7 +5,8 @@
         },
         "redis": {
             "metrics_delta": ["expired_keys", "evicted_keys", "keyspace_hits", "keyspace_misses", "total_connections_received", "total_commands_processed"],
-            "metrics_static": ["instantaneous_ops_per_sec", "used_memory", "mem_fragmentation_ratio", "connected_clients", "rejected_connections"]
+            "metrics_static": ["instantaneous_ops_per_sec", "used_memory", "mem_fragmentation_ratio", "connected_clients", "rejected_connections"],
+            "slave_metrics": true
         },
         "logs": {
             "level": "debug",
@@ -24,7 +25,8 @@
         },
         "redis": {
             "metrics_delta": ["expired_keys", "evicted_keys", "keyspace_hits", "keyspace_misses", "total_connections_received", "total_commands_processed"],
-            "metrics_static": ["instantaneous_ops_per_sec", "used_memory", "mem_fragmentation_ratio", "connected_clients", "rejected_connections"]
+            "metrics_static": ["instantaneous_ops_per_sec", "used_memory", "mem_fragmentation_ratio", "connected_clients", "rejected_connections"],
+            "slave_metrics": true
         },
         "logs": {
             "level": "warn",
